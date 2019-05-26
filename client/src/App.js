@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+import { Provider } from "react-redux";
 import "./App.scss";
+import store from "./store";
 import Header from "./components/Header/Header";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-      </div>
+      <Provider store={store}>
+        <div>
+          <Header />
+        </div>
+      </Provider>
     );
   }
 }
