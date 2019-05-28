@@ -6,12 +6,13 @@ const CategoriesSchema = new Schema({
     type: String,
     required: true
   },
-  subChildren: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "topic"
-    }
-  ]
+  level: {
+    type: String
+  },
+  parentID: {
+    type: Schema.Types.ObjectId,
+    ref: "categories"
+  }
 });
 
 module.exports = Categories = mongoose.model("categories", CategoriesSchema);

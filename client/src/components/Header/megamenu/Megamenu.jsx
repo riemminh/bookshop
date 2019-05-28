@@ -42,7 +42,7 @@ class Megamenu extends Component {
                           <div className="dropdown-menu-inner">
                             {/* row */}
                             <div className="row">
-                              {category.subChildren.map(subCate => (
+                              {category.childNodes.map(subCate => (
                                 <div className="mega-col col-sm-3 ">
                                   <div className="mega-col-inner">
                                     <h3>
@@ -55,7 +55,7 @@ class Megamenu extends Component {
                                       </span>
                                     </h3>
                                     <ul className="nav-links">
-                                      {subCate.subChildren.map(childSub => (
+                                      {subCate.childNodes.map(childSub => (
                                         <li>
                                           <a>{childSub.name}</a>
                                         </li>

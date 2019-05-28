@@ -11,7 +11,9 @@ router.get("/test", (req, res) => res.json({ msg: "categories work" }));
 // @access Private
 router.post("/create", (req, res) => {
   const newCategories = new Categories({
-    name: req.body.name
+    name: req.body.name,
+    level: req.body.level,
+    parentID: req.body.parentID || 0
   });
   newCategories
     .save()
@@ -25,11 +27,26 @@ router.post("/create", (req, res) => {
 
 router.get("/all", (req, res) => {
   Categories.find()
-    .populate({
-      path: "subChildren",
-      populate: { path: "subChildren" }
+    .then(data => {
+      const createDataTree = dataset => {
+        let hashTable = Object.create(null);
+        dataset.forEach(
+          aData => (hashTable[aData._id] = { ...aData._doc, childNodes: [] })
+        );
+        let dataTree = [];
+        dataset.forEach(aData => {
+          if (aData.parentID) {
+            hashTable[aData.parentID].childNodes.push(hashTable[aData._id]);
+          } else {
+            dataTree.push(hashTable[aData._id]);
+          }
+        });
+
+        return dataTree;
+      };
+      const demo = createDataTree(data);
+      res.json(demo);
     })
-    .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 });
 
