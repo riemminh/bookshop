@@ -1,0 +1,6 @@
+.admintest {
+  display: flex;
+}
+.admintest .main {
+  background: #666;
+}
