@@ -29,38 +29,46 @@ a {
   text-decoration: none;
   transition: all 300ms ease-in 0s;
 }
-.navbar {
-  position: initial;
-  display: initial;
-  display: initial;
-  -ms-flex-wrap: initial;
-  flex-wrap: initial;
-  -ms-flex-align: initial;
-  align-items: initial;
-  -ms-flex-pack: initial;
-  justify-content: initial;
-  padding: initial;
+.menu-top {
+  .navbar {
+    position: initial;
+    display: initial;
+    display: initial;
+    -ms-flex-wrap: initial;
+    flex-wrap: initial;
+    -ms-flex-align: initial;
+    align-items: initial;
+    -ms-flex-pack: initial;
+    justify-content: initial;
+    padding: initial;
+    .dropdown-menu {
+      a {
+        padding: 0;
+      }
+    }
+  }
+  .dropdown-menu {
+    position: initial;
+    top: initial;
+    left: initial;
+    z-index: initial;
+    display: initiale;
+    float: initial;
+    min-width: initial;
+    padding: initial;
+    margin: initial;
+    font-size: initial;
+    color: initial;
+    text-align: initial;
+    list-style: initial;
+    background-color: initial;
+    background-clip: initial;
+    border: initial;
+    border-radius: initial;
+    display: initial;
+  }
 }
-.dropdown-menu {
-  position: initial;
-  top: initial;
-  left: initial;
-  z-index: initial;
-  display: initiale;
-  float: initial;
-  min-width: initial;
-  padding: initial;
-  margin: initial;
-  font-size: initial;
-  color: initial;
-  text-align: initial;
-  list-style: initial;
-  background-color: initial;
-  background-clip: initial;
-  border: initial;
-  border-radius: initial;
-  display: initial;
-}
+
 p {
   margin: 0 0 10px;
 }
