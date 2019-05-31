@@ -31,8 +31,8 @@ class Megamenu extends Component {
               <div className="navbar-collapse navbar-ex1-collapse">
                 <ul className="nav navbar-nav verticalmenu">
                   {categories &&
-                    categories.map(category => (
-                      <li className="parent dropdown aligned-left ">
+                    categories.map((category, index) => (
+                      <li key={index} className="parent dropdown aligned-left ">
                         <a>
                           <span className="menu-title">{category.name}</span>
                           <b className="caret" />
@@ -42,8 +42,11 @@ class Megamenu extends Component {
                           <div className="dropdown-menu-inner">
                             {/* row */}
                             <div className="row">
-                              {category.childNodes.map(subCate => (
-                                <div className="mega-col col-sm-3 ">
+                              {category.childNodes.map((subCate, index1) => (
+                                <div
+                                  key={index1}
+                                  className="mega-col col-sm-3 "
+                                >
                                   <div className="mega-col-inner">
                                     <h3>
                                       <span>
@@ -55,11 +58,13 @@ class Megamenu extends Component {
                                       </span>
                                     </h3>
                                     <ul className="nav-links">
-                                      {subCate.childNodes.map(childSub => (
-                                        <li>
-                                          <a>{childSub.name}</a>
-                                        </li>
-                                      ))}
+                                      {subCate.childNodes.map(
+                                        (childSub, index2) => (
+                                          <li key={index2}>
+                                            <a>{childSub.name}</a>
+                                          </li>
+                                        )
+                                      )}
                                       <li>
                                         <span>
                                           <a href="">

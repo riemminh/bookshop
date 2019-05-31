@@ -8,7 +8,7 @@ import User from "./User";
 class Admin extends Component {
   render() {
     return (
-      <div className="admintest">
+      <div className="admin">
         <Sidebar />
         <div className="main">
           <Route exact path="/admin" component={Dashboard} />

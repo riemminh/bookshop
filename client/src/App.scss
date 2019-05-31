@@ -503,160 +503,79 @@ button {
 }
 
 // Admin-CSS
-.admin {
-  .app-header {
-    position: fixed;
-    z-index: 1020;
-    width: 100%;
-    flex-direction: row;
-    height: 55px;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #c8ced3;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    .navbar-brand {
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      -ms-flex-align: center;
-      align-items: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      width: 155px;
-      height: 55px;
-      padding: 0;
-      margin-right: 0;
-      background-color: transparent;
-    }
-    .navbar-toggler-icon {
-      outline: none;
-      height: 23px;
-      display: inline-block;
-      width: 1.5em;
-      vertical-align: middle;
-      content: "";
-      background: no-repeat center center;
-      background-size: 100% 100%;
-      background-image: url("/assets/img/icon_btn.svg");
-    }
-    .navbar-nav {
-      flex-direction: row;
-      padding-left: 0;
-      flex-wrap: wrap;
-      margin-bottom: 0;
-      list-style: none;
-      align-items: center;
-      display: flex;
-      .nav-item {
-        position: relative;
-        min-width: 50px;
-        margin: 0;
-        text-align: center;
-        .nav-link {
-          padding-top: 0;
-          padding-bottom: 0;
-          background: 0;
-          border: 0;
-          color: #73818f;
-          font-size: 0.875rem;
-          cursor: pointer;
-          &:hover {
-            color: #2f353a;
-          }
-          &:focus {
-            color: #2f353a;
-          }
-        }
-      }
+.headerAdmin {
+  position: relative;
+  height: 55px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #c8ced3;
+  display: flex;
+  align-items: center;
+  .logo {
+    img {
+      max-width: 150px;
     }
   }
-  .app-body {
-    margin-top: 55px;
-    .sidebar {
-      height: calc(100vh - 55px);
-      position: fixed;
-      z-index: 1019;
+  .btnToggle {
+    margin-left: 25px;
+    img {
+      width: 26px;
+    }
+  }
+}
+.adminContent {
+  display: flex;
+  .sidebar {
+    nav {
       width: 200px;
-      transition: margin-left 0.25s, margin-right 0.25s, width 0.25s, flex 0.25s,
-        -ms-flex 0.25s;
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      color: #fff;
       background: #2f353a;
-      .sidebar-nav {
-        position: relative;
-        overflow: hidden !important;
-        flex: 1;
-        touch-action: auto;
-        transition: width 0.25s;
-        overflow-anchor: none;
-        width: 200px;
-      }
-      .nav {
-        width: 200px;
-        flex-direction: column;
-        min-height: 100%;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 0;
+    }
+
+    ul {
+      padding: 0;
+      li {
         list-style: none;
-      }
-      .nav-title {
-        padding: 0.75rem 1rem;
-        font-size: 80%;
-        font-weight: 700;
-        color: #e4e7ea;
-        text-transform: uppercase;
-      }
-      .nav-item {
         position: relative;
-        margin: 0;
-        transition: background 0.3s ease-in-out;
-        font-size: 0.875rem;
-        .nav-link {
-          &.active {
-            color: #fff;
-            background: #3a4248;
+        &.parent {
+          > a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            &:after {
+              content: "";
+              background: url("/assets/img/arrow.svg") no-repeat;
+              display: block;
+              width: 10px;
+              height: 10px;
+              position: absolute;
+              color: #fff;
+              right: 15px;
+              align-items: center;
+            }
           }
+        }
+        a {
           display: block;
           padding: 0.75rem 1rem;
           color: #fff;
           text-decoration: none;
           background: 0 0;
           font-size: 0.875rem;
-          .nav-icon {
-            display: inline-block;
-            width: 1.09375rem;
-            margin: 0 0.5rem 0 0;
-            font-size: 0.875rem;
-            text-align: center;
-            color: #20a8d8;
+          &.active {
+            color: #fff;
+            background: #3a4248;
+          }
+          &:hover {
+            background: #20a8d8;
           }
         }
-      }
-      .nav-dropdown-toggle {
-        position: relative;
-        &:before {
-          position: absolute;
-          top: 50%;
-          right: 1rem;
-          display: block;
-          width: 8px;
-          height: 8px;
-          padding: 0;
-          margin-top: -4px;
-          content: "";
-          background-image: url("/assets/img/arrow.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
-          transition: transform 0.3s, -webkit-transform 0.3s;
+        .nav-dropdown-items {
+          li {
+            a {
+              padding-left: 30px;
+            }
+          }
         }
       }
     }
