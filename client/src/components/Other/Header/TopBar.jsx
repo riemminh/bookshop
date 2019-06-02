@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class TopBar extends Component {
   render() {
@@ -26,22 +27,16 @@ class TopBar extends Component {
               <div className="header-link-right header-link">
                 <ul className="nav-links">
                   <li className="first">
-                    <a href="" title="Tạo tài khoản">
-                      Tạo tài khoản
-                    </a>{" "}
+                    <NavLink to="/register">Tạo tài khoản</NavLink>{" "}
                   </li>
                   <li>
-                    <a title="Tài khoản">Tài khoản</a>{" "}
+                    <NavLink to="/login">Tài khoản</NavLink>{" "}
                   </li>
                   <li>
-                    <a href="" title="Đăng nhập">
-                      Đăng nhập
-                    </a>{" "}
+                    <NavLink to="/login">Đăng nhập</NavLink>{" "}
                   </li>
                   <li className=" last">
-                    <a href="" title="Blog">
-                      Blog
-                    </a>{" "}
+                    <NavLink to="/blog">Blog</NavLink>{" "}
                   </li>
                 </ul>
               </div>

@@ -1,7 +1,18 @@
 import React, { Component } from "react";
+
+import { withRouter } from "react-router-dom";
 import Megamenu from "./megamenu/Megamenu";
 
-export default class MenuTop extends Component {
+const mapState = (state, ownProps) => ({
+  riem: "eee"
+});
+
+class MenuTop extends Component {
+  state = {
+    menuShow: false
+  };
+  componentWillMount() {}
+
   render() {
     return (
       <div className="menu-top">
@@ -16,9 +27,9 @@ export default class MenuTop extends Component {
               <div className="block-title hidden-xs hidden-sm">
                 <span>Danh Mục</span>
               </div>
+              <Megamenu />
             </div>
             {/* block-content */}
-            <Megamenu />
           </div>
           {/* ve-mainnav */}
           <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
@@ -61,3 +72,5 @@ export default class MenuTop extends Component {
     );
   }
 }
+
+export default withRouter(MenuTop);

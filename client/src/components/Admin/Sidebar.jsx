@@ -1,52 +1,41 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import $ from "jquery";
+import { dataMenu } from "./Nav";
+
 class Sidebar extends Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    $(".btnToggle").click(function(e) {
+      e.preventDefault();
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(".sidebar").animate(
+          {
+            marginLeft: "0"
+          },
+          400
+        );
+      } else {
+        $(this).addClass("active");
+        $(".sidebar").animate(
+          {
+            marginLeft: "-200px"
+          },
+          400
+        );
+      }
+    });
+    $(".parent > a").click(function(e) {
+      e.preventDefault();
+      $(this)
+        .next()
+        .slideToggle();
+      $(this)
+        .parent()
+        .toggleClass("active");
+    });
   }
   render() {
-    const dataMenu = [
-      {
-        name: "Dashboard",
-        url: "/admin/dashboard"
-      },
-      {
-        name: "Profile",
-        url: "/admin/profile",
-        sub: [
-          {
-            name: "Profile_Sub1",
-            url: "/admin/profile/sub1"
-          },
-          {
-            name: "Profile_Sub2",
-            url: "/admin/profile/sub2"
-          },
-          {
-            name: "Profile_Sub3",
-            url: "/admin/profile/sub3"
-          }
-        ]
-      },
-      {
-        name: "User",
-        url: "/admin/user",
-        sub: [
-          {
-            name: "User_Sub1",
-            url: "/admin/user/sub1"
-          },
-          {
-            name: "User_Sub2",
-            url: "/admin/user/sub2"
-          },
-          {
-            name: "User_Sub3",
-            url: "/admin/user/sub3"
-          }
-        ]
-      }
-    ];
     return (
       <div className="sidebar">
         <nav>

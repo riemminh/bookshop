@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class MiddleBar extends Component {
   render() {
@@ -9,12 +10,12 @@ class MiddleBar extends Component {
             {/* logo */}
             <div className="col-lg-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 no-padding">
               <div className="logo-theme">
-                <a href="" className="logo">
+                <NavLink to="/" className="logo">
                   <img
                     src={process.env.PUBLIC_URL + "/assets/img/logo.png"}
                     alt=""
                   />
-                </a>
+                </NavLink>
               </div>
             </div>
             {/* search */}

@@ -7,21 +7,18 @@ const action = {
 };
 
 const mapState = state => ({
-  categories: state.mega.categories
+  categories: state.mega.categories,
+  isHome: state.mega.isHome
 });
 
 class Megamenu extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.getCategories();
   }
   render() {
-    const { categories } = this.props;
+    const { categories, isHome } = this.props;
     return (
-      <div className="block-content">
+      <div className={isHome ? "block-content" : "block-content notHome"}>
         <div className="navbar navbar-inverse">
           <div
             id="verticalmenu"

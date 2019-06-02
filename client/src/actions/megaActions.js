@@ -1,5 +1,11 @@
 import axios from "axios";
-import { GET_CATEGORIES, LOADING_CATEGORY, GET_ERRORS } from "./types";
+import {
+  GET_CATEGORIES,
+  LOADING_CATEGORY,
+  GET_ERRORS,
+  MEGA_IS_HOME,
+  MEGA_NOT_HOME
+} from "./types";
 
 export const getCategories = () => dispatch => {
   dispatch(loadingCategories());
@@ -20,3 +26,11 @@ export const getCategories = () => dispatch => {
 };
 
 export const loadingCategories = () => ({ type: LOADING_CATEGORY });
+
+export const megaNotHome = () => dispatch => {
+  dispatch({ type: MEGA_NOT_HOME });
+};
+
+export const megaIsHome = () => dispatch => {
+  dispatch({ type: MEGA_IS_HOME });
+};
