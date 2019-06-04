@@ -11,6 +11,7 @@ const SelectListGroup = ({ name, value, error, onChange, options }) => {
       <select name={name} value={value} onChange={onChange}>
         {selectOption}
       </select>
+      {error && <div className="validation-advice">{error}</div>}
     </div>
   );
 };

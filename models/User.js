@@ -18,8 +18,9 @@ const UserSchema = new Schema({
     type: String,
     reuired: true
   },
-  birdthday: {
-    type: Date
+  birthday: {
+    type: Date,
+    required: true
   },
   sex: {
     type: String,

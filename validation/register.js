@@ -7,6 +7,7 @@ const ValidateRegisterInput = data => {
   data.password = data.password ? data.password : "";
   data.lastname = data.lastname ? data.lastname : "";
   data.firstname = data.firstname ? data.firstname : "";
+  data.birthday = data.birthday ? data.birthday : "";
 
   if (!validator.isEmail(data.email)) {
     errors.email = "Vui lòng nhập email chính xác. Ví dụ: yourname@domain.com";
@@ -19,6 +20,9 @@ const ValidateRegisterInput = data => {
   }
   if (validator.isEmpty(data.firstname)) {
     errors.firstname = "Thông tin này quan trọng.Vui lòng không để trống.";
+  }
+  if (validator.isEmpty(data.birthday)) {
+    errors.birthday = "Thông tin này quan trọng.Vui lòng không để trống.";
   }
   if (!validator.isLength(data.password, { min: 6 })) {
     errors.password =

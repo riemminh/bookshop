@@ -1,5 +1,7 @@
 import { combineReducers } from "redux";
 import megaReducer from "./megaReducer";
+import errorReducer from "./errorReducer";
 export default combineReducers({
-  mega: megaReducer
+  mega: megaReducer,
+  errors: errorReducer
 });

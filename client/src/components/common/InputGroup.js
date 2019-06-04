@@ -12,6 +12,7 @@ const InputGroup = ({ name, placeholder, value, error, type, onChange }) => {
           value={value}
           onChange={onChange}
         />
+        {error && <div className="validation-advice">{error}</div>}
       </div>
     </div>
   );

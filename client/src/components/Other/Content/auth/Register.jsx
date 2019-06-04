@@ -1,6 +1,18 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import InputGroup from "../../../common/InputGroup";
 import SelectListGroup from "../../../common/SelectListGroup";
+import DatePicker from "react-datepicker";
+import { registerUser } from "../../../../actions/authActions";
+import moment from "moment";
+
+const action = {
+  registerUser
+};
+
+const mapState = state => ({
+  errors: state.errors
+});
 
 class Register extends Component {
   state = {
@@ -13,14 +25,43 @@ class Register extends Component {
     sex: "",
     errors: {}
   };
-
+  componentWillReceiveProps(nextProps) {
+    if (this.state.errors !== nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
   handleOnchange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
+  handleOnChangeDatePicker = date => {
+    this.setState({
+      birthday: date
+    });
+  };
+  handleSubmitRegister = e => {
+    e.preventDefault();
+    let convertDay = "";
+    if (this.state.birthday) {
+      convertDay = moment(this.state.birthday).format("YYYY/MM/DD");
+    }
+    const userData = {
+      email: this.state.email,
+      password: this.state.password,
+      password1: this.state.password1,
+      lastname: this.state.lastname,
+      firstname: this.state.firstname,
+      birthday: convertDay,
+      sex: this.state.sex
+    };
+    this.props.registerUser(userData, this.props.history);
+  };
   render() {
     const { errors } = this.state;
+
     const options = [
       { label: "", value: "" },
       { label: "Nam", value: "Nam" },
@@ -45,7 +86,7 @@ class Register extends Component {
           </div>
         </div>
         {/* form */}
-        <form action="" id="form-validate">
+        <form onSubmit={this.handleSubmitRegister} id="form-validate">
           <div className="col-lg-12 col-md-12 col-sm-12 form-content">
             {/* back-home */}
             <div className="back-link">
@@ -74,6 +115,7 @@ class Register extends Component {
                     <InputGroup
                       name="password"
                       placeholder="Mật khẩu*"
+                      type="password"
                       value={this.state.password}
                       error={errors.password}
                       onChange={this.handleOnchange}
@@ -82,6 +124,7 @@ class Register extends Component {
                   <li>
                     <InputGroup
                       name="password1"
+                      type="password"
                       placeholder="Xác nhận mật khẩu*"
                       value={this.state.password1}
                       error={errors.password1}
@@ -132,21 +175,29 @@ class Register extends Component {
                     <div className="input-box">
                       <div className="custom-title-input">Ngày Sinh</div>
                       <div className="dropdownfhs input-birthday">
-                        <InputGroup
-                          name="birthday"
-                          placeholder="DD/MM/YY"
-                          value={this.state.birthday}
-                          error={errors.birthday}
-                          onChange={this.handleOnchange}
+                        <DatePicker
+                          selected={this.state.birthday}
+                          openToDate={new Date("1970/01/01")}
+                          onChange={this.handleOnChangeDatePicker}
+                          placeholderText="DD/MM/YYYY"
+                          peekNextMonth
+                          showMonthDropdown
+                          showYearDropdown
+                          dropdownMode="select"
                         />
                       </div>
+                      {errors.birthday && (
+                        <div className="validation-advice">
+                          {errors.birthday}
+                        </div>
+                      )}
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-12 col-md-2 col-sm-12 btn-div">
-              <button type="submit" title="Gởi đi" class="button">
+              <button type="submit" title="Gởi đi" className="button">
                 <span>Gửi thông tin</span>
               </button>
             </div>
@@ -157,4 +208,7 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default connect(
+  mapState,
+  action
+)(Register);
