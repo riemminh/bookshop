@@ -91,7 +91,15 @@ class Register extends Component {
             {/* back-home */}
             <div className="back-link">
               <small>« </small>
-              <a href="">Quay lại</a>
+              <button
+                onClick={e => {
+                  e.preventDefault();
+                  this.props.history.goBack();
+                }}
+                href=""
+              >
+                Quay lại
+              </button>
             </div>
             {/* page-title */}
             <div className="page-title">
