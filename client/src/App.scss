@@ -954,3 +954,213 @@ big {
     }
   }
 }
+
+// banner-home
+.HomeSlider {
+  &:hover {
+    .owl-nav {
+      display: block;
+    }
+  }
+  .owl-nav {
+    // display: none;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    background: red;
+    transform: translateY(-50%);
+
+    margin-top: -33px !important;
+    button {
+      position: absolute;
+      outline: 0px none;
+      margin: 0 !important;
+      span {
+        width: 33px;
+        height: 48px;
+        text-indent: -9999px;
+        background: url(/assets/img/prev-home-slider.png);
+        display: inline-block;
+      }
+      &.owl-next {
+        right: 0;
+        span {
+          background: url(/assets/img/next-home-slider.png);
+        }
+      }
+      &.owl-prev {
+        left: 0;
+      }
+    }
+  }
+}
+.banner-home {
+  padding-top: 30px;
+}
+.customTab {
+  margin-top: 30px;
+  position: relative;
+  .tabslider-title {
+    top: 8px;
+    left: 0;
+    position: absolute;
+    margin-left: 13px;
+    font-size: 19px;
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+  }
+  .nav {
+    &.nav-tabs {
+      justify-content: flex-end;
+      min-height: 45px;
+      background: #fff;
+      border-bottom: 1px solid #ddd !important;
+      width: 100% !important;
+      .nav-item {
+        border: none;
+        padding: 11px 17px;
+        font-size: 14px;
+        &:hover {
+          color: #f7931e;
+        }
+        &.active {
+          background: none;
+          color: #f7931e;
+        }
+      }
+    }
+  }
+  .tab-content {
+    .custom-owl {
+      background: #fff;
+      padding: 30px 15px 0;
+    }
+    .item-inner {
+      position: relative;
+      .label-pro-sale {
+        background: url(/assets/img/sale40.png) no-repeat;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        z-index: 10;
+        top: 0px;
+        font-size: 19px;
+        font-weight: bold;
+        color: transparent;
+        .p-sale-label {
+          font-weight: bold;
+          margin-top: 19%;
+          margin-left: -8px;
+          font-size: 16px;
+          color: white;
+          display: block;
+          text-align: center;
+        }
+      }
+      .ma-box-content {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        .products {
+          margin: 0 0 10px;
+          display: block;
+          .images-container {
+            position: relative;
+            overflow: hidden;
+          }
+        }
+      }
+      .product-name {
+        width: 100%;
+        margin: 0;
+        font-weight: normal;
+        line-height: 18px;
+        display: inline-block;
+        height: 1.3em;
+        a {
+          color: #333333;
+          font-weight: normal;
+          font-size: 14px;
+          display: block;
+          padding-top: 5px;
+          height: inherit;
+        }
+      }
+      .price-label {
+        p {
+          margin-bottom: 0;
+        }
+        .special-price {
+          display: inline-block;
+          zoom: 1;
+          background-color: #f7931e !important;
+          color: #fff;
+          .price {
+            font-size: 14px;
+            min-height: 25px;
+            padding: 3px;
+          }
+        }
+        .old-price {
+          .price {
+            color: #888888;
+            text-decoration: line-through;
+            font-size: 13px;
+          }
+        }
+      }
+      .fhs-rating-container {
+        min-height: 15px;
+        margin-top: 4px;
+        .ratings {
+          display: inline-block;
+          .rating-box {
+            float: left;
+            margin-right: 3px;
+            margin-left: 0px;
+            background: url(/assets/img/bkg_rating_hover_1.png) 0 -1px repeat-x;
+            position: relative;
+            text-indent: -999em;
+            overflow: hidden;
+            width: 80px;
+            height: 14px;
+            font-size: 0;
+            line-height: 0;
+            .rating {
+              background: url(/assets/img/bkg_rating_hover_1.png) 0 100%
+                repeat-x;
+              height: 14px;
+              left: 0;
+              position: absolute;
+              top: 0;
+              float: left;
+            }
+          }
+          .amount {
+            font-size: 11px;
+            color: #4a4a4a;
+            position: relative;
+            top: -2px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .tabs-xem-them {
+    background: #fff;
+    display: inline-block;
+    width: 100%;
+    a {
+      float: right;
+      padding-right: 15px;
+      color: #ff9800;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+  }
+}

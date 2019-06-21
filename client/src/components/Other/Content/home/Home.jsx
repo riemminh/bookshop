@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { megaIsHome, megaNotHome } from "../../../../actions/megaActions";
+import HomeSlider from "./HomeSlider";
+import BannerHome from "./BannerHome";
+import TabHome from "./TabHome";
+import TabHomeCustom from "./TabHomeCustom";
 
 const action = {
   megaIsHome,
@@ -19,7 +23,11 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home Page1</h1>
+        <HomeSlider />
+        <BannerHome />
+        <TabHome tabsTitle="NỔI BẬT" />
+        <TabHome tabsTitle="DEALS 24H - SÁCH TIẾNG VIỆT" />
+        <TabHomeCustom tabsTitle="VĂN HỌC" />
       </div>
     );
   }
