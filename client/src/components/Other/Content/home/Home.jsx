@@ -28,6 +28,7 @@ class Home extends Component {
         <TabHome tabsTitle="NỔI BẬT" />
         <TabHome tabsTitle="DEALS 24H - SÁCH TIẾNG VIỆT" />
         <TabHomeCustom tabsTitle="VĂN HỌC" />
+        <TabHomeCustom tabsTitle="TÂM LÝ - KỸ NĂNGC" />
       </div>
     );
   }

@@ -24,7 +24,7 @@ class TabHomeCustom extends Component {
           items: 3
         },
         1000: {
-          items: 6
+          items: 2
         }
       }
     }
@@ -40,6 +40,16 @@ class TabHomeCustom extends Component {
           activeKey={this.state.key}
           onSelect={key => this.setState({ key })}
         >
+          <div className="banner-tab-custom">
+            <a href="">
+              <img
+                src={
+                  process.env.PUBLIC_URL + "/assets/img/banner-tab-custom.jpg"
+                }
+                alt=""
+              />
+            </a>
+          </div>
           <Tab eventKey="1" title="Văn Học">
             <OwlCarousel
               className="owl-theme custom-owl"
@@ -47,41 +57,99 @@ class TabHomeCustom extends Component {
             >
               <div className="item">
                 <div className="item-inner">
-                  <div className="label-pro-sale">
-                    <span className="p-sale-label discount-l-fs">31%</span>
-                  </div>
-                  <div className="ma-box-content">
-                    <div className="products">
-                      <a href="">
-                        <span className="product-image">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/img/vanhoc-1.jpg"
-                            }
-                            alt=""
-                          />
-                        </span>
-                      </a>
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
                     </div>
-                    <h2 className="product-name">
-                      <a href="">Name Product</a>
-                    </h2>
-                    <div className="price-label">
-                      <p className="special-price">
-                        <span className="price m-price-font">49.500đ</span>
-                      </p>
-                      <p className="old-price bg-white">
-                        <span className="price m-price-font">90.000đ</span>
-                      </p>
-                    </div>
-                    {/* ranting */}
-                    <div className="fhs-rating-container">
-                      <div className="ratings fhs-no-mobile-block">
-                        <div className="rating-box">
-                          <div className="rating" style={{ width: `${80}%` }} />
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
                         </div>
-                        <div className="amount">(8)</div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="item-inner">
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
+                        </div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -95,47 +163,103 @@ class TabHomeCustom extends Component {
           <Tab eventKey="2" title="Tâm Lý - Kỹ Năng">
             <OwlCarousel
               className="owl-theme custom-owl"
-              loop
-              items={6}
-              dots={false}
-              margin={27}
+              {...this.state.options}
             >
               <div className="item">
                 <div className="item-inner">
-                  <div className="label-pro-sale">
-                    <span className="p-sale-label discount-l-fs">40%</span>
-                  </div>
-                  <div className="ma-box-content">
-                    <div className="products">
-                      <a href="">
-                        <span className="product-image">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL + "/assets/img/tamly-1.jpg"
-                            }
-                            alt=""
-                          />
-                        </span>
-                      </a>
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
                     </div>
-                    <h2 className="product-name">
-                      <a href="">Name Product</a>
-                    </h2>
-                    <div className="price-label">
-                      <p className="special-price">
-                        <span className="price m-price-font">49.500đ</span>
-                      </p>
-                      <p className="old-price bg-white">
-                        <span className="price m-price-font">90.000đ</span>
-                      </p>
-                    </div>
-                    {/* ranting */}
-                    <div className="fhs-rating-container">
-                      <div className="ratings fhs-no-mobile-block">
-                        <div className="rating-box">
-                          <div className="rating" style={{ width: `${80}%` }} />
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
                         </div>
-                        <div className="amount">(8)</div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="item-inner">
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
+                        </div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -149,48 +273,103 @@ class TabHomeCustom extends Component {
           <Tab eventKey="3" title="Nuôi Dạy Con">
             <OwlCarousel
               className="owl-theme custom-owl"
-              loop
-              items={6}
-              dots={false}
-              margin={27}
+              {...this.state.options}
             >
               <div className="item">
                 <div className="item-inner">
-                  <div className="label-pro-sale">
-                    <span className="p-sale-label discount-l-fs">60%</span>
-                  </div>
-                  <div className="ma-box-content">
-                    <div className="products">
-                      <a href="">
-                        <span className="product-image">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/img/nuoidaytre-1.jpg"
-                            }
-                            alt=""
-                          />
-                        </span>
-                      </a>
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
                     </div>
-                    <h2 className="product-name">
-                      <a href="">Name Product</a>
-                    </h2>
-                    <div className="price-label">
-                      <p className="special-price">
-                        <span className="price m-price-font">49.500đ</span>
-                      </p>
-                      <p className="old-price bg-white">
-                        <span className="price m-price-font">90.000đ</span>
-                      </p>
-                    </div>
-                    {/* ranting */}
-                    <div className="fhs-rating-container">
-                      <div className="ratings fhs-no-mobile-block">
-                        <div className="rating-box">
-                          <div className="rating" style={{ width: `${80}%` }} />
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
                         </div>
-                        <div className="amount">(8)</div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="item-inner">
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
+                        </div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -204,48 +383,103 @@ class TabHomeCustom extends Component {
           <Tab eventKey="4" title="Kinh Tế">
             <OwlCarousel
               className="owl-theme custom-owl"
-              loop
-              items={6}
-              dots={false}
-              margin={27}
+              {...this.state.options}
             >
               <div className="item">
                 <div className="item-inner">
-                  <div className="label-pro-sale">
-                    <span className="p-sale-label discount-l-fs">65%</span>
-                  </div>
-                  <div className="ma-box-content">
-                    <div className="products">
-                      <a href="">
-                        <span className="product-image">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/img/kinhte-1.jpg"
-                            }
-                            alt=""
-                          />
-                        </span>
-                      </a>
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
                     </div>
-                    <h2 className="product-name">
-                      <a href="">Name Product</a>
-                    </h2>
-                    <div className="price-label">
-                      <p className="special-price">
-                        <span className="price m-price-font">49.500đ</span>
-                      </p>
-                      <p className="old-price bg-white">
-                        <span className="price m-price-font">90.000đ</span>
-                      </p>
-                    </div>
-                    {/* ranting */}
-                    <div className="fhs-rating-container">
-                      <div className="ratings fhs-no-mobile-block">
-                        <div className="rating-box">
-                          <div className="rating" style={{ width: `${80}%` }} />
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
                         </div>
-                        <div className="amount">(8)</div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="item-inner">
+                  <div className="wrap-item">
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="label-pro-sale">
+                        <span className="p-sale-label discount-l-fs">31%</span>
+                      </div>
+                      <div className="products">
+                        <a href="">
+                          <span className="product-image">
+                            <img
+                              src={
+                                process.env.PUBLIC_URL +
+                                "/assets/img/vanhoc-1.jpg"
+                              }
+                              alt=""
+                            />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-6 padd-l-r">
+                      <div className="ma-box-content">
+                        <h2 className="product-name">
+                          <a href="">Name Product</a>
+                        </h2>
+                        <div className="price-label">
+                          <p className="special-price">
+                            <span className="price m-price-font">49.500đ</span>
+                          </p>
+                          <p className="old-price bg-white">
+                            <span className="price m-price-font">90.000đ</span>
+                          </p>
+                        </div>
+                        {/* ranting */}
+                        <div className="fhs-rating-container">
+                          <div className="ratings fhs-no-mobile-block">
+                            <div className="rating-box">
+                              <div
+                                className="rating"
+                                style={{ width: `${80}%` }}
+                              />
+                            </div>
+                            <div className="amount">(8)</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

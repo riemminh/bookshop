@@ -4,6 +4,7 @@ import "./App.scss";
 import Header from "./components/Other/Header/Header";
 import Admin from "./components/Admin/Admin";
 import Other from "./components/Other/Other";
+import Footer from "./components/Other/Footer/Footer";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             <div>
               <Header path={this.props} />
               <Other />
+              <Footer />
             </div>
           )}
         />

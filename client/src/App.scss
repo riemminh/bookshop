@@ -1000,6 +1000,47 @@ big {
 .customTab {
   margin-top: 30px;
   position: relative;
+  &.tabHomeCustom {
+    &:nth-of-type(2n) {
+      .tab-content {
+        .banner-tab-custom {
+          float: right;
+        }
+        .owl-carousel {
+          float: left;
+        }
+        .tabs-xem-them {
+          width: 66.66666666666666%;
+        }
+      }
+    }
+    .tab-content {
+      background: #fff;
+      padding-top: 30px;
+      .custom-owl {
+        padding: 0;
+      }
+    }
+    .banner-tab-custom {
+      display: block;
+      opacity: 1;
+      width: 33.33333333333333%;
+      float: left;
+      padding-left: 40px;
+    }
+    .owl-carousel {
+      width: 66.66666666666666%;
+      float: right;
+    }
+    .item-inner {
+      .wrap-item {
+        display: flex;
+        .products {
+          padding: 20px;
+        }
+      }
+    }
+  }
   .tabslider-title {
     top: 8px;
     left: 0;
@@ -1161,6 +1202,79 @@ big {
       font-size: 14px;
       margin-bottom: 10px;
       text-decoration: none;
+    }
+  }
+}
+
+// footer
+.ma-footer-static {
+  margin-top: 30px;
+  .copy {
+    background: #fff;
+    text-align: center;
+    color: #adadad;
+    padding-left: 14px;
+  }
+  .footer-static {
+    .container-inner {
+      background: #fff;
+      .footer-static-title {
+        border-color: gray;
+        color: black;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+      }
+      .custom-address {
+        .footer-static-content {
+          ul {
+            li {
+              clear: both;
+              display: inline-block;
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+              padding-left: 10px;
+              span {
+                font-family: "OpenSansBold";
+                color: #444;
+                font-size: 13px;
+                padding-right: 5px;
+              }
+              .fa {
+                float: left;
+                font-size: 16px;
+                color: #7b7b7b;
+                margin-right: 15px;
+                padding-left: 5px;
+                height: 34px;
+                width: 32px;
+                line-height: 32px;
+                text-align: center;
+                border: 2px solid #7b7b7b;
+              }
+            }
+          }
+        }
+      }
+      .footer-static-content {
+        ul {
+          li {
+            border-color: gray;
+            color: black;
+            border-bottom: 1px solid #393939;
+            a {
+              line-height: 40px;
+              padding-left: 20px;
+              color: black;
+              &:hover {
+                background-position: 0px -40px;
+                padding-left: 25px;
+                color: #ea7696;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
