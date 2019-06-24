@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { getCategories } from "../../../../actions/megaActions";
 
 const action = {
@@ -30,10 +31,10 @@ class Megamenu extends Component {
                   {categories &&
                     categories.map((category, index) => (
                       <li key={index} className="parent dropdown aligned-left ">
-                        <a>
-                          <span className="menu-title">{category.name}</span>
+                        <Link to={`/product/category_name`}>
+                          <span className="menu-title">{category.name}123</span>
                           <b className="caret" />
-                        </a>
+                        </Link>
                         {/* dropdown-menu */}
                         <div className="dropdown-menu">
                           <div className="dropdown-menu-inner">

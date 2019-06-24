@@ -5,7 +5,6 @@ import HomeSlider from "./HomeSlider";
 import BannerHome from "./BannerHome";
 import TabHome from "./TabHome";
 import TabHomeCustom from "./TabHomeCustom";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import WOW from "wowjs";
 const action = {
   megaIsHome,
@@ -36,16 +35,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        {/* <ReactCSSTransitionGroup
-          transitionName="example"
-          transitionAppear={true}
-          transitionAppearTimeout={1500}
-          transitionEnter={false}
-          transitionLeave={false}
-        >
-          <HomeSlider />
-        </ReactCSSTransitionGroup> */}
-
         <HomeSlider />
 
         <BannerHome />
