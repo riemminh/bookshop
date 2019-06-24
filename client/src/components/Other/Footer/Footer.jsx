@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
       <div>
-        <div className="ma-footer-static">
+        <div className="ma-footer-static wow fadeIn">
           <div className="footer-static">
             <div className="container">
               <div className="container-inner">
@@ -78,7 +78,7 @@ class Footer extends Component {
                     </div>
                     <div className="footer-static-content">
                       <ul>
-                        <li class="first">
+                        <li className="first">
                           <em className="fa fa-map-marker">&nbsp;</em>
                           <span>Địa Chỉ:</span> 60-62 Lê Lợi, Q.1, TP. HCM{" "}
                         </li>
@@ -87,7 +87,7 @@ class Footer extends Component {
                           <span>Email:</span>info@fahasa.com
                         </li>
                         <li className="last">
-                          <em class="fa fa-phone">&nbsp;</em>
+                          <em className="fa fa-phone">&nbsp;</em>
                           <span>Phone:</span>1900636467
                         </li>
                       </ul>

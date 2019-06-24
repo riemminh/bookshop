@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { MODAL_LOGIN_OPEN } from "../../../actions/types";
 import { logOutUser } from "../../../actions/authActions";
+import { modalworkFun } from "../../../actions/modalActions";
 
-const action = { logOutUser };
+const action = { logOutUser, modalworkFun };
 
 const mapState = state => ({
   auth: state.auth
 });
 
 class TopBar extends Component {
+  handleClickModal = e => {
+    e.preventDefault();
+    this.props.modalworkFun(MODAL_LOGIN_OPEN);
+  };
   render() {
     const ListLogOut = (
       <div className="pull-right">
@@ -22,7 +28,9 @@ class TopBar extends Component {
               <NavLink to="/login">Tài khoản</NavLink>{" "}
             </li>
             <li>
-              <NavLink to="/login">Đăng nhập</NavLink>{" "}
+              <a href="#" onClick={this.handleClickModal}>
+                Đăng nhập
+              </a>
             </li>
             <li className=" last">
               <NavLink to="/blog">Blog</NavLink>{" "}

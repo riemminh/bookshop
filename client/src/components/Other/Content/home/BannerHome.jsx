@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class BannerHome extends Component {
   render() {
     return (
-      <div className="banner-home">
+      <div className="banner-home wow fadeIn">
         <div className="row">
           {/* 6 */}
           <div className="col-sm-6 col-md-6 col-xs-12">

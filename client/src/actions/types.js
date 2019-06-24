@@ -7,3 +7,6 @@ export const MEGA_NOT_HOME = "MEGA_NOT_HOME";
 export const GET_ERRORS = "GET_ERRORS";
 // auth
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
+// modals
+export const MODAL_LOGIN_OPEN = "MODAL_LOGIN_OPEN";
+export const MODAL_LOGIN_CLOSE = "MODAL_LOGIN_CLOSE";

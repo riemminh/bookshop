@@ -9,7 +9,7 @@ const OwlCarousel = require("react-owl-carousel");
 class HomeSlider extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="row wow fadeIn pink">
         <div className="col-sms12 col-md-3 col-sm-12" />
         <div className="col-sms12 col-md-9 col-sm-12">
           <OwlCarousel

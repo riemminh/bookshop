@@ -15,7 +15,7 @@ class MenuTop extends Component {
 
   render() {
     return (
-      <div className="menu-top">
+      <div className="menu-top wow fadeIn">
         <div className="row">
           {/* category */}
           <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12  hidden-xs hidden-sm">

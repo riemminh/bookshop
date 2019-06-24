@@ -15,7 +15,7 @@ class TabHome extends Component {
   render() {
     const { tabsTitle } = this.props;
     return (
-      <div className="customTab tabHome">
+      <div className="customTab tabHome wow fadeIn" data-wow-offset="30">
         <div className="tabslider-title">{tabsTitle}</div>
         <Tabs
           id="controlled-tab-example"

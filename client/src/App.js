@@ -5,7 +5,7 @@ import Header from "./components/Other/Header/Header";
 import Admin from "./components/Admin/Admin";
 import Other from "./components/Other/Other";
 import Footer from "./components/Other/Footer/Footer";
-
+import LoginModal from "./components/common/Modal/LoginModal";
 class App extends Component {
   render() {
     return (
@@ -22,6 +22,7 @@ class App extends Component {
           path="/"
           render={() => (
             <div>
+              <LoginModal />
               <Header path={this.props} />
               <Other />
               <Footer />

@@ -1278,3 +1278,11 @@ big {
     }
   }
 }
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
