@@ -6,6 +6,7 @@ import PrivateRoute from "../common/PrivateRoute";
 import Login from "./Content/auth/Login";
 import Home from "./Content/home/Home";
 import Profile from "./Content/profile/Profile";
+import Products from "./Content/product/Products";
 
 class Routes extends Component {
   render() {
@@ -16,6 +17,7 @@ class Routes extends Component {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/registersuccess" component={RegisterSuccess} />
+          <Route path="/products" component={Products} />
           <PrivateRoute path="/profile" component={Profile} />
         </Switch>
       </div>
