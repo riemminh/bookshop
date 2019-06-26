@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { loginUser } from "../../../../actions/authActions";
+import WOW from "wowjs";
 
 const action = { loginUser };
 
@@ -15,7 +16,11 @@ class Login extends Component {
     password: "",
     errors: {}
   };
-
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   componentWillReceiveProps(nextProps) {
     if (this.state.errors !== nextProps.errors) {
       this.setState({
@@ -41,7 +46,7 @@ class Login extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <div className="container-inner">
+        <div className="container-inner  wow fadeIn">
           <div className="account-login">
             <div className="formblockwbg">
               <form onSubmit={this.handleSubmit} id="login-form">

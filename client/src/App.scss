@@ -1443,3 +1443,210 @@ big {
     }
   }
 }
+.col-fhs-main-body {
+  background: #fff;
+  padding-top: 30px;
+}
+.mb-category-products {
+  .toolbar {
+    margin-bottom: 25px;
+    padding: 0 20px;
+  }
+
+  .sort-by {
+    padding: 0;
+    display: block;
+    position: relative;
+    &:after {
+      background: white;
+      position: absolute;
+      content: "\f0d7";
+      font-family: FontAwesome;
+      z-index: 1;
+      right: 1px;
+      width: 15px;
+      top: 1px;
+      height: 92%;
+      text-align: center;
+      padding-top: 4px;
+      pointer-events: none;
+    }
+    select {
+      border: 1px solid #929191 !important;
+      color: #646464 !important;
+      border-radius: 3px;
+      width: 100% !important;
+      min-width: 100px;
+      text-align: left !important;
+      padding: 1px !important;
+      margin: 0 !important;
+      text-indent: 2px;
+      vertical-align: middle;
+      height: 30px;
+      -webkit-appearance: none;
+      font-size: 12px;
+      background: transparent;
+    }
+  }
+  .select-sort-by {
+    @extend .sort-by;
+    width: 100px;
+  }
+  .pages {
+    ol {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      li {
+        height: 28px;
+        width: 28px;
+        font-size: 12px;
+        margin: 0 2px;
+        border: none;
+        border-radius: 100%;
+        line-height: 28px;
+        padding: 0;
+        display: flex;
+        background: #4c4c4c;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          color: #fff !important;
+        }
+        &.current {
+          background: #c00;
+        }
+      }
+    }
+  }
+  .products-grid {
+    li {
+      padding-bottom: 30px;
+    }
+    padding: 0 20px;
+    .label-pro-sale {
+      background: url("/assets/img/sale40.png") no-repeat;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      z-index: 10;
+      top: 0px;
+      font-size: 19px;
+      font-weight: bold;
+      color: transparent;
+      left: 15px;
+      .p-sale-label {
+        margin-top: 19%;
+        margin-left: -8px;
+        font-size: 16px;
+        color: white;
+        display: block;
+        text-align: center;
+      }
+    }
+    .item-inner {
+      position: relative;
+      .ma-box-content {
+        padding-left: 20px;
+        display: block;
+        padding-right: 20px;
+        .products {
+          margin: 0 0 10px;
+          display: block;
+        }
+      }
+      .images-container {
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+        .product-image {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .price-label {
+        position: absolute;
+        right: 11px;
+        top: 0;
+      }
+      .price-box {
+        font-size: 15px;
+        margin-top: 2px;
+        margin-bottom: 5px;
+        .special-price {
+          background-color: #f7931e !important;
+          color: #fff;
+          display: inline-block;
+          .price {
+            font-size: 14px;
+            min-height: 25px;
+            padding: 3px;
+          }
+        }
+      }
+    }
+    .product-name {
+      height: 46px;
+      display: block;
+      max-height: 40px;
+      line-height: 17px;
+      overflow: hidden;
+      margin: 0;
+      a {
+        display: block;
+        padding-top: 5px;
+        font-size: 14px;
+        height: inherit;
+        color: #333333;
+        font-weight: normal;
+      }
+    }
+    .product-hh {
+      border: 1px solid;
+      padding: 2px;
+      vertical-align: top;
+      padding-left: 3px;
+      padding-right: 3px;
+      color: white;
+      background-color: #f7921f;
+      display: inline-block;
+      font-size: 12px;
+      opacity: 0.7;
+      margin-left: 5px;
+    }
+    .rating-container {
+      width: 120%;
+      display: flex;
+      .ratings {
+        margin: 0 !important;
+        display: flex;
+        .rating-box {
+          position: relative;
+          overflow: hidden;
+          width: 80px;
+          height: 14px;
+          font-size: 0;
+          line-height: 0;
+          .rating {
+            width: 100%;
+            background: url("/assets/img/bkg_rating_hover_1.png") 0 100%
+              repeat-x;
+            height: 14px;
+            left: 0;
+            position: absolute;
+            top: 0;
+          }
+        }
+        .amount {
+          font-size: 11px;
+          color: #4a4a4a;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

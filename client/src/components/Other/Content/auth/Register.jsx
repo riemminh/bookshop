@@ -5,7 +5,7 @@ import SelectListGroup from "../../../common/SelectListGroup";
 import DatePicker from "react-datepicker";
 import { registerUser } from "../../../../actions/authActions";
 import moment from "moment";
-
+import WOW from "wowjs";
 const action = {
   registerUser
 };
@@ -25,6 +25,11 @@ class Register extends Component {
     sex: "",
     errors: {}
   };
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   componentWillReceiveProps(nextProps) {
     if (this.state.errors !== nextProps.errors) {
       this.setState({
@@ -68,7 +73,7 @@ class Register extends Component {
       { label: "Nữ", value: "Nữ" }
     ];
     return (
-      <div className="account-create">
+      <div className="account-create wow fadeIn">
         {/* banner */}
         <div className="container-inner">
           <div className="col-lg-12 col-md-12 col-sm-12 banner-customer-account-create">

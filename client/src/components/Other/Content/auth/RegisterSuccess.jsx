@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-
+import WOW from "wowjs";
 class RegisterSuccess extends Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   render() {
     return (
-      <div>
+      <div className=" wow fadeIn">
         <div className="account-create">
           <div className="col-lg-12">
             <div className="register-success">

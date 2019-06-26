@@ -10,27 +10,33 @@ class FormalitySider extends Component {
             <ol className="m-filter-css-checkboxes ">
               <li>
                 <a className="m-checkbox-unchecked " href="">
-                  Kim Đồng
+                  Bìa Mềm
                 </a>
-                (1288)
+                (10894)
               </li>
               <li>
                 <a className="m-checkbox-unchecked " href="">
-                  Kim Đồng
+                  Bìa Cứng
                 </a>
-                (1288)
+                (412)
               </li>
               <li>
                 <a className="m-checkbox-unchecked " href="">
-                  Kim Đồng
+                  Sách Kèm Đĩa
                 </a>
-                (1288)
+                (16)
               </li>
               <li>
                 <a className="m-checkbox-unchecked m-checkbox-checked" href="">
-                  Kim Đồng
+                  Bộ Hộp
                 </a>
-                (1288)
+                (10)
+              </li>
+              <li>
+                <a className="m-checkbox-unchecked m-checkbox-checked" href="">
+                  Sách Khổ Lớn (7)
+                </a>
+                (10)
               </li>
             </ol>
           </dd>

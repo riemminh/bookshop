@@ -31,7 +31,7 @@ class Megamenu extends Component {
                   {categories &&
                     categories.map((category, index) => (
                       <li key={index} className="parent dropdown aligned-left ">
-                        <Link to={`/product/category_name`}>
+                        <Link to={`/products`}>
                           <span className="menu-title">{category.name}123</span>
                           <b className="caret" />
                         </Link>

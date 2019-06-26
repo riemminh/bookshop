@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ListCategorySider from "./ListCategorySider";
 import PriceSider from "./PriceSider";
 import FormalitySider from "./FormalitySider";
+import SupplierSider from "./SupplierSider";
+import AgeSider from "./AgeSider";
 
 class SiderBarProduct extends Component {
   render() {
@@ -15,6 +17,8 @@ class SiderBarProduct extends Component {
             <ListCategorySider />
             <PriceSider />
             <FormalitySider />
+            <SupplierSider />
+            <AgeSider />
           </div>
         </div>
       </div>
