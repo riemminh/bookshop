@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class ItemMain extends Component {
   render() {
@@ -12,14 +13,14 @@ class ItemMain extends Component {
             {/* products */}
             <div className="products clearfix">
               <div className="product images-container">
-                <a href="">
+                <Link to="/product-detail">
                   <span className="product-image">
                     <img
                       src={process.env.PUBLIC_URL + "/assets/img/vanhoc-1.jpg"}
                       alt=""
                     />
                   </span>
-                </a>
+                </Link>
               </div>
               {/* products */}
               {/* price */}

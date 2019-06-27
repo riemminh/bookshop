@@ -7,6 +7,7 @@ import Login from "./Content/auth/Login";
 import Home from "./Content/home/Home";
 import Profile from "./Content/profile/Profile";
 import Products from "./Content/product/Products";
+import ProductDetail from "./Content/product-detail/ProductDetail";
 
 class Routes extends Component {
   render() {
@@ -18,6 +19,7 @@ class Routes extends Component {
           <Route path="/register" component={Register} />
           <Route path="/registersuccess" component={RegisterSuccess} />
           <Route path="/products" component={Products} />
+          <Route path="/product-detail" component={ProductDetail} />
           <PrivateRoute path="/profile" component={Profile} />
         </Switch>
       </div>
